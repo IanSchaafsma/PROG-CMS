@@ -1,0 +1,248 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 40rem;
+
+}
+
+header, footer{
+    background-color: #222832;
+    color: white;
+    height: 6rem;
+}
+
+main{
+    padding: 4rem;
+    min-height: 100vh;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+nav{
+    width: 60vw;
+    height: 100%;
+    margin:0 auto;
+}
+
+nav > ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+nav > ul > li{
+    width: 100%;
+    height: 100%;
+}
+
+.active{
+    background-color: rgb(154, 199, 224);
+}
+
+nav > ul > li > a{
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 6rem;
+    text-decoration: none;
+    color: white;
+}
+
+
+h1{
+    font-size: 250%;
+    margin-bottom:2rem;
+    border-bottom: 0.1rem solid black;
+    font-weight: 50rem;
+}
+
+section{
+    width: 100%;
+    padding: 4rem;
+}
+
+article{
+    width:100%;
+    margin: 0 auto;   
+    padding:4rem;
+}
+
+.box{
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+.box > a > figure{
+    width: 100%;
+    height: 100%;
+}
+
+.box > a > figure > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
+}
+
+.box > a > figure > img:hover{
+    transform: none;
+}
+
+.box > a > section{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    padding: 4rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent,80%, black);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+#raport{
+    text-decoration: none;
+    color: blue;
+}
+
+figure{
+    margin-bottom: 4rem;
+}
+
+img{
+    width:100%;
+    border-radius: 0.5rem;
+    transition: 0.2s transform;
+}
+
+img:hover{
+    transform: scale(1.025);
+}
+
+
+p{
+    margin-bottom: 4rem;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
+}
+
+figcaption{
+    font-size: 80%;
+    font-style: italic;
+    font-weight: 40rem;
+}
+
+audio{
+    display:block;
+    margin-top: 2rem;
+}
+
+video{
+    width: 100%;
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+}
+
+.top{
+    width: 8rem;
+    height: 8rem;
+    background: #222831;
+    border: none;
+    font-size: 150%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.5rem;
+    color: white;
+    position: fixed;
+    bottom: 12rem;
+    right: 12rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    display:flex;
+    align-items: center;
+}
+
+footer > p{
+    width: 60vw;
+    margin: 0 auto;
+    padding-left: 8rem;
+}
+
+@media screen and (max-width:62.5rem) {
+    main{
+        width:80vw; 
+    }
+
+    footer > p{
+        width: 80vw;
+    }
+
+    img:hover{
+        transform: none;
+    }
+
+    .top{
+        width: 6rem;
+        height: 6rem;
+        bottom: 6rem;
+        right: 6rem;
+    }
+
+    header{
+        height: auto;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav > ul{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    body{
+        font-size:1.6rem;
+    }
+    main{
+        width:100vw;
+        padding: 2rem;
+    }
+    h1{
+        font-size: 180%;
+    }
+    footer > p{
+        width: 100vw;
+        padding-left: 6rem;
+    }
+}
