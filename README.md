@@ -1,17 +1,17 @@
-PROG CMS:
+# PROG CMS:
 
 
-Taken verdeling:
+## Taken verdeling:
 
-Dani:
-Rollen en rechten verschillende soorten gebruikers
-Content management
+### Dani: <br>
+Rollen en rechten verschillende soorten gebruikers <br>
+Content management <br>
 
 
-Ian:
-Aanmeldprocedurevoor verschillende soorten gebruikers
-Inlogvoor verschillende soorten gebruikers
-Dashboard
+### Ian: <br>
+Aanmeldprocedurevoor verschillende soorten gebruikers <br>
+Inlogvoor verschillende soorten gebruikers <br>
+Dashboard <br>
 
-Samen:
+## Samen:
 Asset management
