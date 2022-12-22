@@ -17,10 +17,10 @@
     <header id="header">
         <nav>
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="pikmin.html">Pikmin</a></li>
-                <li><a href="Pearl.html">Pokémon</a></li>
-                <li><a href="Mariokart.html">Mario Kart</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="pikmin.php">Pikmin</a></li>
+                <li><a href="Pearl.php">Pokémon</a></li>
+                <li><a href="Mariokart.php">Mario Kart</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
         <section>
         <h1>Artikelen</h1>
         <article class="box">
-            <a href="pikmin.html">
+            <a href="pikmin.php">
                 <figure>
                     <img src="./beheer/IMG/Pikminbloom3.webp"
                         alt="Verschillende kleine wezens (pikmin) in verschillende kleuren.">
@@ -40,7 +40,7 @@
             </a>
         </article>
         <article class="box">
-            <a href="Pearl.html">
+            <a href="Pearl.php">
                 <figure>
                     <img src="./beheer/IMG/pokemon2.webp"
                         alt="De twee hoofdrol pokemon spelers met allemaal pokémon in een grot.">
@@ -52,7 +52,7 @@
             </a>
         </article>
         <article class="box">
-            <a href="Mariokart.html">
+            <a href="Mariokart.php">
                 <figure>
                     <img src="./beheer/IMG/mariokart2.webp" alt="Mario en zijn vrienden op een race track.">
                 </figure>

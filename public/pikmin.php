@@ -17,10 +17,10 @@
     <header id="header">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="pikmin.html">Pikmin</a></li>
-                <li><a href="Pearl.html">Pokémon</a></li>
-                <li><a href="Mariokart.html">Mario Kart</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li class="active"><a href="pikmin.php">Pikmin</a></li>
+                <li><a href="Pearl.php">Pokémon</a></li>
+                <li><a href="Mariokart.php">Mario Kart</a></li>
             </ul>
         </nav>
     </header>
