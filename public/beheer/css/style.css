@@ -197,6 +197,55 @@ footer > p{
     padding-left: 8rem;
 }
 
+/* LOGIN PAGE */
+
+.login{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    background: #222832;
+    width: 40rem;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(170%);
+    color: #222832;
+    gap: 1rem;
+}
+
+.form__text{
+    display: block;
+}
+
+.form__box{
+    padding: 0.5rem 0.5rem;
+    color: #222832;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-bottom: 0.2rem solid #222832;
+}
+
+.form__submit{
+    background: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 90%;
+}
+
+.form__link{
+    color: blue;
+    font-size: 50%;
+}
+
 @media screen and (max-width:62.5rem) {
     main{
         width:80vw; 

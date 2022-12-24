@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -21,6 +25,22 @@
                 <li><a href="pikmin.php">Pikmin</a></li>
                 <li><a href="Pearl.php">Pokémon</a></li>
                 <li><a href="Mariokart.php">Mario Kart</a></li>
+                <li>
+                <?php 
+                if(isset($_SESSION["userid"]))
+                {
+            ?>        
+                <p><?php echo $_SESSION["useruser"]; ?></p>
+            <?php
+                }
+                else
+                {
+            ?>
+                <p>none</p>
+            <?php
+                }
+            ?>
+                </li>
             </ul>
         </nav>
     </header>
@@ -67,6 +87,7 @@
     <a class="top" href="#header">Top</a>
     <footer>
         <p>Gemaakt door: Ian & Dani</p>
+
     </footer>
 </body>
 
