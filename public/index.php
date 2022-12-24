@@ -25,23 +25,21 @@
                 <li><a href="pikmin.php">Pikmin</a></li>
                 <li><a href="Pearl.php">Pokémon</a></li>
                 <li><a href="Mariokart.php">Mario Kart</a></li>
-                <li>
-                <?php 
-                if(isset($_SESSION["userid"]))
-                {
-            ?>        
-                <p><?php echo $_SESSION["useruser"]; ?></p>
-            <?php
-                }
-                else
-                {
-            ?>
-                <p>none</p>
-            <?php
-                }
-            ?>
-                </li>
             </ul>
+            <?php 
+                    if(isset($_SESSION["userid"]))
+                    {
+                ?>        
+                    <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
+                <?php
+                    }
+                    else
+                    {
+                ?>
+                    <p class="header_user">none</p>
+                <?php
+                    }
+                ?>
         </nav>
     </header>
     <main>

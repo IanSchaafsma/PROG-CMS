@@ -22,6 +22,10 @@ header, footer{
     height: 6rem;
 }
 
+header{
+    position: relative;
+}
+
 main{
     padding: 4rem;
     min-height: 100vh;
@@ -244,6 +248,18 @@ footer > p{
 .form__link{
     color: blue;
     font-size: 50%;
+}
+
+.header_user{
+    position: absolute;
+    top: 22.5%;
+    right: 10%;
+    color: white;
+
+}
+
+.header_user:hover{
+    text-shadow: 1px 1px rgb(154, 199, 224);
 }
 
 @media screen and (max-width:62.5rem) {

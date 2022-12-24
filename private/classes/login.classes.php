@@ -5,15 +5,15 @@ class Login extends Dbh {
     protected function getUser($user, $password){
         $stmt = $this->connect()->prepare('SELECT users_password FROM users WHERE users_user = ? OR users_email = ?;');
 
-        if($stmt->execute(array($user, $password))){
+        if(!$stmt->execute(array($user, $password))){
             $stmt = null;
-            header("location: ../../public/index.php?error=none");
+            header("location: ../../public/inlog.php?error=stmtfailed");
             exit();
         }
 
-        if($stmt->rowCount() ==0){
+        if($stmt->rowCount() == 0){
             $stmt = null;
-            header("location: ../../public/inlog.php?error=invalid");
+            header("location: ../../public/inlog.php?error=usernotfound");
             exit();
         }
 
@@ -25,18 +25,18 @@ class Login extends Dbh {
             header("location: ../../public/inlog.php?error=wrongpassword");
             exit();
         }
-        elseif($checkPassword == true) {
+        elseif($checkPassword == true){
             $stmt = $this->connect()->prepare('SELECT * FROM users WHERE users_user = ? OR users_email = ? AND users_password = ?;');
 
-            if($stmt->execute(array($user, $user, $password))){
+            if(!$stmt->execute(array($user, $user, $password))){
                 $stmt = null;
-                header("location: ../../public/index.php?error=none");
+                header("location: ../../public/inlog.php?error=stmtfailed");
                 exit();
             }
-
+        
             if($stmt->rowCount() == 0){
                 $stmt = null;
-                header("location: ../../public/index.php?error=none");
+                header("location: ../../public/inlog.php?error=usernotfound");
                 exit();
             }
 
