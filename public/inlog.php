@@ -18,6 +18,7 @@
 </head>
 <body class="login">
     <form class="form" method="post" action="../private/includes/login-inc.php">
+        <h2 class="login__h2">Inloggen</h2>
         <div>
             <label class="form__text" for="user">Naam</label>
             <input class="form__box" type="text" name="user" placeholder="Naam" id="user" required>
@@ -27,7 +28,7 @@
             <input class="form__box" type="password" name="password" placeholder="Wachtwoord" id="password" required>
         </div>
         <input class="form__submit" type="submit" name="submit" value="Log in">
-        <a class="form__link" href="aanmelden.php">Aanmelden</a>
+        <a class="form__link" href="aanmelden.php">Nog geen account? Aanmelden</a>
     </form>
 </body>
 </html>

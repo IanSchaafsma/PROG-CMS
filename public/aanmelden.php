@@ -18,6 +18,7 @@
 </head>
 <body class="login">
     <form class="form" method="post" action="../private/includes/signup-inc.php">
+        <h2 class="login__h2">Aanmelden</h2>
         <div>
             <label class="form__text" for="email">Email</label>
             <input class="form__box" type="email" name="email" placeholder="Email" id="email" required>
@@ -34,7 +35,7 @@
         </div>
         
         <input class="form__submit" type="submit" name="submit" value="Aanmelden">
-        <a class="form__link" href="inlog.php">Inloggen</a>
+        <a class="form__link" href="inlog.php">Heeft u al een account? Inloggen</a>
     </form>
 </body>
 </html>

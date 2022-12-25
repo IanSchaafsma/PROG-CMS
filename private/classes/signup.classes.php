@@ -9,7 +9,7 @@ class Signup extends Dbh {
 
         if($stmt->execute(array($user, $hashedPassword, $email))){
             $stmt = null;
-            header("location: ../../public/aanmelden.php?error=none");
+            header("location: ../../public/inlog.php?error=none");
             exit();
         }
 

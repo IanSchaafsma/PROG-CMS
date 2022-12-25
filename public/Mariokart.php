@@ -26,6 +26,20 @@
                 <li><a href="Pearl.php">Pokémon</a></li>
                 <li class="active"><a href="Mariokart.php">Mario Kart</a></li>
             </ul>
+            <?php 
+                    if(isset($_SESSION["userid"]))
+                    {
+                ?>        
+                    <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
+                <?php
+                    }
+                    else
+                    {
+                ?>
+                    <p class="header_user">none</p>
+                <?php
+                    }
+                ?>
         </nav>
     </header>
     <main>
