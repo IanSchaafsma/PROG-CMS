@@ -4,14 +4,14 @@
 ## Taken verdeling:
 
 ### Dani: <br>
-Rollen en rechten verschillende soorten gebruikers <br>
+Dashboard <br>
 Content management <br>
 
 
 ### Ian: <br>
 Aanmeldprocedurevoor verschillende soorten gebruikers <br>
 Inlogvoor verschillende soorten gebruikers <br>
-Dashboard <br>
+Rollen en rechten verschillende soorten gebruikers <br>
 
 ## Samen:
 Asset management
