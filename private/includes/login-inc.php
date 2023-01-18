@@ -1,4 +1,5 @@
 <?php
+include "../classes/rights.classes.php";
 
 if(isset($_POST["submit"])){
 
@@ -7,7 +8,7 @@ if(isset($_POST["submit"])){
     $password = $_POST["password"];
 
     // Instantiate SignupContr class
-    include "../classes/dbh.classes.php";
+    //include "../classes/dbh.classes.php";
     include "../classes/login.classes.php";
     include "../classes/login-contr.classes.php";
     $login = new LoginContr($user, $password);
@@ -15,6 +16,19 @@ if(isset($_POST["submit"])){
     // Running error handlers and user signup
     $login->loginUser();
 
-    // Going to back to front page
-    header("location: ../../public/index.php?error=none");
+    // Checking if admin
+    $rightVar = rightCheck();
+    if($rightVar > 0){
+        header("location: ../../public/dashboard.php?error=none");
+        exit;
+    }
+    else{
+        // Going to back to front page
+        header("location: ../../public/index.php?error=none");
+        exit;
+    }
+    
+
+
+ 
 }

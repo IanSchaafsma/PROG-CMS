@@ -1,8 +1,8 @@
 <?php 
-    session_start();
+
 ?>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="nl">
 
     <head>
@@ -14,39 +14,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="./beheer/css/style.css">
-        <title>Game Artikelen</title>
+        <title>Homepage</title>
     </head>
 
     <body>
         <header id="header">
             <nav>
                 <ul>
-                    <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="pikmin.php">Pikmin</a></li>
-                    <li><a href="Pearl.php">Pokémon</a></li>
-                    <li><a href="Mariokart.php">Mario Kart</a></li>
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="inlog.php">Pikmin</a></li>
+                    <li><a href="inlog.php">Pokémon</a></li>
+                    <li><a href="inlog.php">Mario Kart</a></li>
                 </ul>
-                <?php 
-                        if(isset($_SESSION["userid"]))
-                        {
-                    ?>        
-                        <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
-                    <?php
-                        }
-                        else
-                        {
-                    ?>
-                        <p class="header_user">none</p>
-                    <?php
-                        }
-                    ?>
+                <a class="header_login" href="inlog.php" >INLOGGEN</a>
             </nav>
         </header>
         <main>
             <section>
             <h1>Artikelen</h1>
             <article class="box">
-                <a href="pikmin.php">
+                <a href="inlog.php">
                     <figure>
                         <img src="./beheer/IMG/Pikminbloom3.webp"
                             alt="Verschillende kleine wezens (pikmin) in verschillende kleuren.">
@@ -58,7 +45,7 @@
                 </a>
             </article>
             <article class="box">
-                <a href="Pearl.php">
+                <a href="inlog.php">
                     <figure>
                         <img src="./beheer/IMG/pokemon2.webp"
                             alt="De twee hoofdrol pokemon spelers met allemaal pokémon in een grot.">
@@ -70,7 +57,7 @@
                 </a>
             </article>
             <article class="box">
-                <a href="Mariokart.php">
+                <a href="inlog.php">
                     <figure>
                         <img src="./beheer/IMG/mariokart2.webp" alt="Mario en zijn vrienden op een race track.">
                     </figure>
@@ -85,21 +72,6 @@
         <a class="top" href="#header">Top</a>
         <footer>
             <p>Gemaakt door: Ian & Dani</p>
-            <a href="">Log out</a>
-            <?php 
-                        if(isset($_SESSION["userid"]))
-                        {
-                    ?>        
-                        <a href="../private/includes/logout.inc.php">Log out</a>
-                    <?php
-                        }
-                        else
-                        {
-                    ?>
-                        <a href="#">Log out</a>
-                    <?php
-                        }
-                    ?>
         </footer>
     </body>
 

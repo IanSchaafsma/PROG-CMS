@@ -273,8 +273,40 @@ footer > p{
 
 }
 
+.header_login{
+    position: absolute;
+    top: 22.5%;
+    right: 7.8%;
+    text-decoration: none;
+    color: white;
+    border: 0.2rem solid white;
+    padding: 0.2rem 2rem;
+    cursor: pointer;
+}
+
 .header_user:hover{
     text-shadow: 1px 1px rgb(154, 199, 224);
+}
+
+.dashboardGrid{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardGridItem{
+    width: 100%;
+    height: 30rem;
+    box-shadow: 0.4rem 2rem 0.5rem 0 rgba(0, 0, 0, 0.156);
+    border-radius: 0.3rem;
+}
+
+.dashboardGridItem:hover{
+    box-shadow: 0.4rem 1rem 0.5rem 0 rgba(0, 0, 0, 0.156);
+    transition: 0.2s;
+
 }
 
 @media screen and (max-width:62.5rem) {

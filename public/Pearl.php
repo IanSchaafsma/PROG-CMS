@@ -28,7 +28,7 @@
             </ul>
             <?php 
                     if(isset($_SESSION["userid"]))
-                    {
+                    {none
                 ?>        
                     <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
                 <?php
@@ -36,7 +36,7 @@
                     else
                     {
                 ?>
-                    <p class="header_user">none</p>
+                    <p class="header_user"></p>
                 <?php
                     }
                 ?>
