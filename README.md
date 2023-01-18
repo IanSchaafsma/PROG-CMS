@@ -4,8 +4,8 @@
 ## Taken verdeling:
 
 ### Dani: <br>
-Dashboard <br>
-Content management <br>
+Dashboard (fine tunen)<br>
+Content management (af gemaakt) <br>
 
 
 ### Ian: <br>
