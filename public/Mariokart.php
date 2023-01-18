@@ -111,6 +111,20 @@
     <a class="top" href="#header">Top</a>
     <footer>
         <p>Gemaakt door: Ian & Dani</p>
+        <?php 
+                        if(isset($_SESSION["userid"]))
+                        {
+                    ?>        
+                        <a href="../private/includes/logout.inc.php">Log out</a>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                        <a href="#">Log out</a>
+                    <?php
+                        }
+                    ?>
     </footer>
 </body>
 

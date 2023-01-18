@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +22,24 @@
             <nav>
                 <ul>
                     <li class="active"><a href="">Home</a></li>
-                    <li><a href="inlog.php">Pikmin</a></li>
-                    <li><a href="inlog.php">Pokémon</a></li>
-                    <li><a href="inlog.php">Mario Kart</a></li>
+                    <li><a href="pikmin.php">Pikmin</a></li>
+                    <li><a href="Pearl.php">Pokémon</a></li>
+                    <li><a href="Mariokart.php">Mario Kart</a></li>
                 </ul>
+                <?php 
+                        if(isset($_SESSION["userid"]))
+                        {
+                    ?>        
+                        <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                        <p class="header_user">none</p>
+                    <?php
+                        }
+                    ?>
             </nav>
         </header>
         <main>
@@ -33,13 +47,31 @@
             <h1>Dashboard</h1>
             </section>
             <section class="dashboardGrid">
-                <article class="dashboardGridItem"></article>
-                <article class="dashboardGridItem"></article>
-                <article class="dashboardGridItem"></article>
+                <article class="dashboardGridItem">
+                <form action="pikmin.php" method="post" enctype="multipart/form-data">
+                    <h2 class="db-1">Select image to upload:</h2>
+                    <input class="db-2" type="file" name="fileToUpload" id="fileToUpload">
+                    <input class="db-3" type="submit" value="Upload Image" name="submit">
+                </form>
+                </article>
             </section>
         </main> 
         <footer>
             <p>Gemaakt door: Ian & Dani</p>
+            <?php 
+                        if(isset($_SESSION["userid"]))
+                        {
+                    ?>        
+                        <a href="../private/includes/logout.inc.php">Log out</a>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                        <a href="#">Log out</a>
+                    <?php
+                        }
+                    ?>
         </footer>
     </body>
 

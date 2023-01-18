@@ -27,19 +27,19 @@
                 <li><a href="Mariokart.php">Mario Kart</a></li>
             </ul>
             <?php 
-                    if(isset($_SESSION["userid"]))
-                    {none
-                ?>        
-                    <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
-                <?php
-                    }
-                    else
-                    {
-                ?>
-                    <p class="header_user"></p>
-                <?php
-                    }
-                ?>
+                        if(isset($_SESSION["userid"]))
+                        {
+                    ?>        
+                        <p class="header_user"><?php echo $_SESSION["useruser"]; ?></p>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                        <p class="header_user">none</p>
+                    <?php
+                        }
+                    ?>
         </nav>
     </header>
     <main>
@@ -126,6 +126,20 @@
     <a class="top" href="#header">Top</a>
     <footer>
         <p>Gemaakt door: Ian & Dani</p>
+        <?php 
+                        if(isset($_SESSION["userid"]))
+                        {
+                    ?>        
+                        <a href="../private/includes/logout.inc.php">Log out</a>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                        <a href="#">Log out</a>
+                    <?php
+                        }
+                    ?>
     </footer>
 </body>
 

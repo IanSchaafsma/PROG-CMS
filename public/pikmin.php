@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require "../private/cms/upload.php";
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +47,8 @@
         <article>
             <h1>🌻 Pikmin Bloom is uit</h1>
             <figure>
-                <img src="./beheer/IMG/pikminbloom.webp" alt="Foto van de pikminbloom">
+                <img src="../private/cms/uploads<?php print($img); ?>" alt="">
+                
                 <figcaption>
                     🌱 Pikmin zijn kleine vrolijke wezens,
                     kleur de hele wereld tot een mooie tuin!
@@ -108,6 +110,20 @@
     <a class="top" href="#header">Top</a>
     <footer>
         <p>Gemaakt door: Ian & Dani</p>
+        <?php 
+                        if(isset($_SESSION["userid"]))
+                        {
+                    ?>        
+                        <a href="../private/includes/logout.inc.php">Log out</a>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                        <a href="#">Log out</a>
+                    <?php
+                        }
+                    ?>
     </footer>
 </body>
 
