@@ -1,50 +1,75 @@
 <?php
-$target_dir = "../private/cms/uploads";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+class ImageUploader {
+  private $target_dir;
+  private $target_file;
+  private $uploadOk;
+  private $imageFileType;
 
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    $uploadOk = 1;
-  } else {
-    echo "Het bestand is geen afbeelding.. ";
-    $uploadOk = 0;
+  public function __construct($target_dir) {
+    $this->target_dir = $target_dir;
+    $this->target_file = $this->target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $this->uploadOk = 1;
+    $this->imageFileType = strtolower(pathinfo($this->target_file, PATHINFO_EXTENSION));
+  }
+
+  public function checkImage() {
+    if(isset($_POST["submit"])) {
+      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+      if($check !== false) {
+        $this->uploadOk = 1;
+      } else {
+        echo "Het bestand is geen afbeelding.. ";
+        $this->uploadOk = 0;
+      }
+    }
+  }
+
+  public function checkFileExists() {
+    if (file_exists($this->target_file)) {
+      echo "Sorry, het bestand bestaat al. ";
+      $this->uploadOk = 0;
+    }
+  }
+
+  public function checkFileSize() {
+    if ($_FILES["fileToUpload"]["size"] > 500000) {
+      echo "Sorry, je bestand is te groot ";
+      $this->uploadOk = 0;
+    }
+  }
+
+  public function checkFileType() {
+    if($this->imageFileType != "jpg" && $this->imageFileType != "png" && $this->imageFileType != "jpeg"
+      && $this->imageFileType != "gif" ) {
+      echo "Sorry, alleen JPG, JPEG, PNG & GIF zijn toegestaan. ";
+      $this->uploadOk = 0;
+    }
+  }
+
+  public function uploadFile() {
+    if ($this->uploadOk == 0) {
+      echo "Sorry, je bestand is niet geupload door een error ";
+    } else {
+      if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $this->target_file)) {
+      } else {
+        echo "Sorry, er is een error";
+      }
+    }
+  }
+
+  public function getFileName() {
+    return $_FILES["fileToUpload"]["name"];
   }
 }
 
-// Check if file already exists
-if (file_exists($target_file)) {
-  echo "Sorry, het bestand bestaad al. ";
-  $uploadOk = 0;
-}
+// Usage:
+$imageUploader = new ImageUploader("../private/cms/uploads");
+$imageUploader->checkImage();
+$imageUploader->checkFileExists();
+$imageUploader->checkFileSize();
+$imageUploader->checkFileType();
+$imageUploader->uploadFile();
+$img = $imageUploader->getFileName();
 
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-  echo "Sorry, je bestand is te groot ";
-  $uploadOk = 0;
-}
-
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-  echo "Sorry, alleen JPG, JPEG, PNG & GIF zijn toegestaan. ";
-  $uploadOk = 0;
-}
-
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-  echo "Sorry, je bestand is niet geupload door een error ";
-// if everything is ok, try to upload file
-} else {
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-  } else {
-    echo "Sorry, er is een error";
-  }
-}
-
-$img = $_FILES["fileToUpload"]["name"];
 
 ?>
