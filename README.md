@@ -1,17 +1,13 @@
-# PROG CMS:
+# PROG CMS OOP:
 
 
 ## Taken verdeling:
 
 ### Dani: <br>
-Dashboard (fine tuning) <br>
-Content management (af gemaakt) <br>
+Rollen en rechten verschillende soorten gebruikers (OOP gemaakt) <br><br>
 
 
 ### Ian: <br>
-Aanmeldprocedurevoor verschillende soorten gebruikers (af gemaakt) <br>
-Inlogvoor verschillende soorten gebruikers (af gemaakt) <br>
-Rollen en rechten verschillende soorten gebruikers (af gemaakt) <br>
+Aanmeldprocedurevoor verschillende soorten gebruikers (OOP gemaakt) <br>
+Inlogvoor verschillende soorten gebruikers (OOP gemaakt) <br>
 
-## Samen:
-Asset management
