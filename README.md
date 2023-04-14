@@ -5,7 +5,7 @@
 
 ### Dani: <br>
 Dashboard (fine tuning) <br>
-Content management (af gemaakt) <br>
+Content management (af gemaakt) en OOP <br>
 
 
 ### Ian: <br>
